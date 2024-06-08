@@ -3,18 +3,18 @@ import { useState } from 'react'
 
 export default function Counter() {
     const[counter,setCounter]=useState(0)
-    const handleSubmit=()=>{
+    const handleIncrease=()=>{
         setCounter(counter+1)
     }
-    const handleSub=()=>{
+    const handleDecrease=()=>{
         setCounter(counter-1)
     }
 
   return (
     <div>
         <p>{counter}</p>
-        <button onClick={handleSubmit}>Increase</button>
-        <button onClick={handleSub}>Decrease</button>
+        <button onClick={handleIncrease}>Increase</button>
+        <button onClick={handleDecrease}>Decrease</button>
     </div>
   )
 }

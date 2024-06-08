@@ -2,11 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-export default function Layout() {
+export default function Layout(props) {
   return (
     <>
-    <nav>
-        <ul>
+    {/* <nav className="bg-slate-300 shadow-lg "> */}
+    <nav className='bg-slate-300 sm:bg-slate-400 md:bg-slate-500 lg:bg-slate-700 xl:bg-slate-600 lg:text-white shadow-lg p-[18px]'>
+
+
+        {/* <ul className='flex gap-4'> */}
+        <ul className='flex justify-end gap-4'>
             <li>
                 <Link to ="/">Home</Link>
                 </li>
@@ -18,6 +22,7 @@ export default function Layout() {
                     </li>
                         </ul>
                         </nav>
+                        <div>{props.children}</div>
                         </>
     
   )

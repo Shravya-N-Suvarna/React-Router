@@ -1,10 +1,10 @@
 import React from "react";
-import Counter from "./Counter";
-// import {BrowserRouter,Routes,Route} from 'react-router-dom';
-// import Layout from "./Layout";
-// import Home from "./Home";
-// import Blogs from "./Blogs";
-// import Contact from "./Contact";
+// import Counter from "./components/Counter";
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
 function App() {
   
     // const myStyle={
@@ -20,25 +20,26 @@ function App() {
 
   return (
     <div>
-      <Counter/>
+      {/* <Counter/> */}
       {/* <h1 style={myStyle} >Hello Style!</h1>
       <p>
         Add a little Style!
       </p> */}
       {/* <h1 style ={{color:"red", backgroundColor: "blue"}}>Accelerlab Solutions</h1> */}
 
-      {/* <BrowserRouter>
+      <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout/>}></Route>
-        <Route path="/" element={<Home/>}/>
-        <Route path="blogs" element={<Blogs/>}/>
-        <Route path="contact" element={<Contact/>}/>
+        {/* <Route path="/" element={<Layout/>}></Route> */}
+        <Route path="/" element={<Layout><Home/></Layout>}/>
+        <Route path="/blogs" element={<Layout><Blogs/></Layout>}/>
+        <Route path="/contact" element={<Layout><Contact/></Layout>}/>
+        <Route path="*" element={<div>Not found page</div>}/>
 
            
         
         </Routes>
         
-        </BrowserRouter> */}
+        </BrowserRouter>
       
     </div>
   );
